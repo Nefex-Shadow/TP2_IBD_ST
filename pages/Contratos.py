@@ -12,7 +12,7 @@ st.write('#### Esse trecho representa os valores que os contratos agregaram para
 
 left_column, right_column = st.columns(2)
 
-left_column.write('#### Escolha os municípios de interesse e qual tipo de contrato gorstaria de analisar.')
+left_column.write('##### Escolha os municípios de interesse e qual tipo de contrato gorstaria de analisar.')
 left_column.write('Note contratos diferentes tiveram seus valores somados, logo os valores apresentados na tabela são os valores totais do dia')
 
 query = '''
@@ -98,7 +98,6 @@ else:
         data['Dia'].values[i] = data['Dia'].values[i].replace('07', data['Dia'].values[i][0] + data['Dia'].values[i][1])
         data['Dia'].values[i] = data['Dia'].values[i].replace(data['Dia'].values[i][0] + data['Dia'].values[i][1], '07', 1)
 
-    st.write(data)
     chart = (
         alt.Chart(data)
         .mark_area(opacity=0.3)
