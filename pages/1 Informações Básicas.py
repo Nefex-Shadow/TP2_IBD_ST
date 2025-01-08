@@ -10,6 +10,7 @@ st.markdown("""
 - **Luís Eduardo Limas Brito**: 2023102329
 - **Felipe Araujo Melo**: 2023027947
 - **Natanael dos Santos Júnior**: 2023087842
+- **Ulisses Drumond Souza Rosa**: 2023028161
 """)
 
 st.subheader("2. Descrição dos dados")
