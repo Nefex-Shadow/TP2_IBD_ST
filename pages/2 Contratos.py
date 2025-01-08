@@ -60,7 +60,7 @@ for m in municipios:
     SELECT DISTINCT
         M.mun_nome as Nome, C.data as Data, SUM(C.valor) as Valor
     FROM
-        Contrato as C RIGHT JOIN (SELECT DISTINCT M.nome as mun_nome, G.codigo as gas_codigo
+        Contrato as C JOIN (SELECT DISTINCT M.nome as mun_nome, G.codigo as gas_codigo
             FROM Instalacao_de_Gasoduto as G JOIN Municipio as M
             ON G.codigo_municipio = M.codigo
             WHERE M.nome = "replace_mun") as M
